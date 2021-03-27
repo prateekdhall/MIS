@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table-Less Ajax Contact Form (Demo)</title>
+<meta name="keywords" content="form, divs" />
+<meta name="description" content="a css tableless ajax contact form" />
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">                                         
+<!--  
+// When DOM is ready
+$(document).ready(function() {
+    
+    // ------- Submit First Form -------
+    $("#ajax-contact-form").submit(function() {
+        var result, str = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "includes/contact-process.php",
+            data: str,
+            success: function(msg) {
+                // Message Sent? Show the 'Thank You' message and hide the form
+                if(msg == 'OK') {
+                    result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+                    $("#fields_contact").hide();
+                } else {
+                    result = msg;
+                }
+
+                $('#note_contact').html(result);
+            }
+        });
+        return false;
+    });
+    
+    // ------- Submit Second Form -------
+    $("#feedback-form").submit(function() {
+        var result, str = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "includes/feedback-process.php",
+            data: str,
+            success: function(msg) {
+                // Message Sent? Show the 'Thank You' message and hide the form
+                if(msg == 'OK') {
+                        result = '<div class="notification_ok">Your feedback has been sent. Thank you!</div>';
+                        $("#fields_feedback").hide();
+                } else {
+                        result = msg;
+                }
+                $('#note_feedback').html(result);
+            }
+        });
+        return false;
+    });
+});
+-->
+ </script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+</head>
+<body>
+<div style="width:100%;">
+ <div style="float: left; width: 800px; margin: 0 auto;">
+<h2 style="margin: 20px 0 20px 150px;">Buyer Information Page</h2>
+<div id="note_contact"></div>
+<div id="fields_contact">
+<form id="ajax-contact-form" method="post" action="">
+<label>Buyer Name <span class="req"> </span></label><input type="text" name="name" value="" size="40"/><br />
+<label>Buyer code <span class="req"> </span></label><input type="text" name="email" value="" size="40"/><br />
+<label>Address <span class="req"> </span></label><textarea name="message" rows="2" cols="39"></textarea><br />
+<label>City</label><input type="text" name="subject" value="" size="40"/><br />
+<label>Country</label><select name="cars">
+    <option value="-1"> --- Select Country ---</option>  
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="Australia">Australia</option>
+    <option value="China">China</option>
+     </select><br />
+    <label>Contact Person</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Email Address</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Buyeing House</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Bank Name</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Address <span class="req"> </span></label><textarea name="message" rows="2" cols="39"></textarea><br />
+    <label>City</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Payment Term</label><input type="text" name="subject" value="" size="40"/><br />
+    <label>Currency <span class="req"> </span></label><select name="cars" >
+    <option value=" "> </option>  
+    <option value="volvo">IN</option>
+      <option value="saab">US</option>
+       
+     </select><br />
+ 
+<label>&nbsp;</label><button type="submit" class="btn btn-primary rounded submit p-3 px-5"> Save</button>
+</form>
+</div>
+</div>
+ 
+<div style="clear:both;"></div>
+</div>
+</body>
+</html>

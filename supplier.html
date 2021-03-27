@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>CSS3 animated dropdown menu - demo</title>
+    <meta name="viewport" content="width=device-width" />	
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+ <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+    $(function() {
+		if ($.browser.msie && $.browser.version.substr(0,1)<7)
+		{
+		$('li').has('ul').mouseover(function(){
+			$(this).children('ul').css('visibility','visible');
+			}).mouseout(function(){
+			$(this).children('ul').css('visibility','hidden');
+			})
+		}
+
+		/* Mobile */
+		$('#menu-wrap').prepend('<div id="menu-trigger">Menu</div>');		
+		$("#menu-trigger").on("click", function(){
+			$("#menu").slideToggle();
+		});
+
+		// iPad
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) $('#menu ul').addClass('no-transition');      
+    });          
+</script>
+
+<nav id="menu-wrap">    
+	<ul id="menu">
+		<li><a href="/">HOME</a></li>
+
+		<li>
+			<a href="">MASTER</a>
+			<ul>
+				<li>
+					<a href="buyer.html">Buyer</a>
+					 			
+				</li>
+				<li>
+					<a href="supplier.html">Supplier</a>
+
+				</li>
+				<li>
+					<a href="">Product</a>
+
+					 			
+				</li>
+
+				<li>
+					<a href="">Colors</a>
+					 			
+				</li>
+				<li>
+					<a href="">Size</a>				
+					 	
+				</li>
+				<li>
+					<a href="">Yarn</a>				
+					 	
+				</li>
+				<li>
+					<a href="">Accessories</a>				
+					 	
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Work</a>
+			<ul>
+
+				<li>
+					<a href="">Work 1</a>
+					 				
+				</li>
+				<li>
+					<a href="">Work 2</a>
+					 	
+				</li>
+				<li>
+					<a href="">Work 3</a>
+					 			
+				</li>
+
+			</ul>		
+		</li>
+		<li><a href="">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</nav>
+
+
+<div style="width:100%;">
+	<div style="width:100%;">
+		<h2 style="width:100%;">Supplier Information Page</h2>
+		<div id="note_contact"></div>
+		<div id="fields_contact">
+			<form id="ajax-contact-form" method="post" action="">
+				<label>Vendor Name <span class="req"> </span></label><input type="text" name="name" value="" size="40"/><br />
+				<label>Address1 <span class="req"> </span></label><input type="text" name="email" value="" size="40"/><br />
+				<label>Address2 <span class="req"> </span></label><input type="text" name="email" value="" size="40"/><br />
+				<label>City</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>State</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>State Code</label><input type="text" name="subject" value="" size="10"/><br />
+				<label>Contact Person</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Cell (If Any)</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Email Address</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Vendor Type</label><select name="cars">
+     
+    <option value="India">Multipurpose</option>
+    <option value="USA">Yarn</option>
+    <option value="Australia">Dye</option>
+    <option value="China">Jobwork</option>
+	<option value="Australia">Dye/Che</option>
+	<option value="Australia">Shipping</option>
+	<option value="Australia">Courier</option>
+	<option value="Australia">Others</option>
+     </select><br />
+				<label>GST NO</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Bank Name</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Branch </label><input type="text" name="subject" value="" size="40"/><br />
+				<label>Acno</label><input type="text" name="subject" value="" size="40"/><br />
+				<label>IFSC Code</label><input type="text" name="subject" value="" size="20"/><br />
+				<label>IFSC Code</label><input type="text" name="subject" value="" size="20"/><br />
+				<label>PRF</label><input type="text" name="subject" value="" size="10"/><br />
+				<label>Unit/Section/Outside <span class="req"> </span></label><select name="cars" >
+				<option value=" "> </option>
+				<option value="volvo">UNIT</option>
+				<option value="saab">SECTION</option>
+				<option value="volvo">INSIDE</option>
+				<option value="saab">OUTSIDE</option>
+
+			</select><br />
+<label>Due Days</label><input type="text" name="subject" value="" size="10"/><br />
+				<label>&nbsp;</label><button type="submit" class="btn btn-primary rounded submit p-3 px-5"> Save</button>
+				<label>&nbsp;</label><button type="submit" class="btn btn-primary rounded submit p-3 px-5"> Clear</button>
+			</form>
+		</div>
+	</div>
+
+	<div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>
