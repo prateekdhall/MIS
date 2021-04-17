@@ -60,12 +60,12 @@ $(document).ready(function(){
 			<div class="nav-item dropdown">
 				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle active">Master</a>
 				<div class="dropdown-menu">					
-					<a href="#" class="dropdown-item">Buyer</a>
+					<a href="Buyer.html" class="dropdown-item">Buyer</a>
 					<a href="Supplier.html" class="dropdown-item">Supplier</a>
-					<a href="#" class="dropdown-item">Product</a>
-					<a href="#" class="dropdown-item">Yarn</a>
+					<a href="Product.html" class="dropdown-item">Product</a>
+					<a href="Yarn.html" class="dropdown-item">Yarn</a>
 					<a href="#" class="dropdown-item">Size</a>
-					<a href="#" class="dropdown-item">Colors</a>
+					<a href="Colors.html" class="dropdown-item">Colors</a>
                 </div>
             </div>
 			
@@ -89,10 +89,10 @@ $(document).ready(function(){
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2>Manage <b>Buyers</b></h2>
+						<h2>Manage <b>Product</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Buyer</span></a>
+						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
 						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
 					</div>
 				</div>
@@ -217,47 +217,117 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Add Buyer</h4>
+					<h4 class="modal-title">Add Product</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
+                    <div class="form-group">
+                    <input type="radio"/> Pcs Dyed    
+ 
+                    <input type="radio"/> Yarn Dyed 
+                    </div>
+                    <div class="form-group">
+						<label>Select Item</label>
+						<select name="Blanket">
+     
+                        <option value="Blanket">Blanket</option>
+
+                         </select>
+					</div>	
 					<div class="form-group">
-						<label>Buyer Name</label>
+						<label>Buyer Desin No</label>
 						<input type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Buyer code</label>
+						<label>Internal Design</label>
 						<input type="text" class="form-control" required>
 					</div>
+                    
+                    <div class="form-group">
+                        <label>Order Size</label>
+                        <select name="cars" style="width: 100px;">     
+                        <option value="1">1</option>     
+                        </select>  
+                        <label>M. Size</label>
+                        <select name="B" style="width: 100px;">     
+                        <option value="1">1</option>     
+                        </select> 
+                    </div>
 					<div class="form-group">
-						<label>Address</label>
-						<textarea class="form-control" required></textarea>
+						<label>Yarn Cal. on</label>
+                        <select name="cars" style="width: 300px;">     
+                        <option value="test">test</option>     
+                        </select>
 					</div>
 					<div class="form-group">
-						<label>City</label>
-						<input type="text" class="form-control" required>
+						<label>Product Colour</label>
+                        <select name="Black" style="width: 300px;">     
+                        <option value="Black">Black</option>     
+                        </select>
 					</div>	
 					
 					<div class="form-group">
-						<label>Payment Term</label>
-						<input type="text" class="form-control" required>
+						<label>Tuft Colour</label>
+                        <select name="cars" style="width: 300px;">     
+                        <option value="Tuft">Tuft Colour</option>     
+                        </select>
 					</div>	
-					
-					
 					
 					<div class="form-group">
-						<label>Currency</label>
-						<select name="cars" >
-    <option value=" "> </option>  
-    <option value="volvo">IN</option>
-      <option value="saab">US</option>
-       
-     </select>
+						 <label>Quality(Gms)</label>
+                        <input type="text" class="form-control" name="subject" value="" size="10"/>
+                        <select name="Black" style="width: 200px;">     
+                        <option value="Black">GMS Gms</option>     
+                        </select>
 					</div>	
+					
+					<div class="form-group">
+						<label>Units</label>
+                        <select name="Black" style="width: 100px;">     
+                            <option value="Black"> </option>     
+                        </select><select name="Black" style="width: 100px;">     
+                            <option value="Black"> </option>     
+                        </select>
+					</div>	
+					
+					<div class="form-group">
+						<label>Composition</label>
+                        <input type="text" name="subject" class="form-control" value="" size="40"/>
+					</div>	
+					
+					<div class="form-group">
+						<label>Product Image</label>
+                <input type="text" name="subject" value="" class="form-control" size="40" style="height:200px;" /><br/>
+                <label>&nbsp;</label>
+                <input type="file" id="upload" hidden/>
+                <label for="upload" style="display: inline-block;
+  background-color: indigo;
+  color: white;
+  padding: 0.4rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;">Select Image</label>
+					</div>	
+					 
+				<div class="form-group">
+						<label>Buyer Article</label>
+                    <input type="text" name="subject" class="form-control" value="" size="40"/><br />
+				 
+					</div>	
+
+                    <div class="form-group">
+						<label>HSNC Code</label>
+                        <input type="text" name="subject" class="form-control" value="" size="40"/><br />
 				
+					</div>	
 
-
-					
+                    <div class="form-group">
+						<label>Prod Code</label> 
+                        <input type="text" name="subject" class="form-control" value="" size="40"/><br />
+				
+					</div>	
+ 
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -273,20 +343,20 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Edit Buyer</h4>
+					<h4 class="modal-title">Edit Supplier</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
 										<div class="form-group">
-						<label>Buyer Name</label>
+						<label>Vendor Name</label>
 						<input type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Buyer code</label>
+						<label>Address1</label>
 						<textarea class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
-						<label>Address</label>
+						<label>Address2</label>
 						<textarea class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
@@ -295,21 +365,89 @@ $(document).ready(function(){
 					</div>	
 					
 					<div class="form-group">
-						<label>Payment Term</label>
+						<label>State</label>
 						<input type="text" class="form-control" required>
 					</div>	
 					
-					
+					<div class="form-group">
+						<label>Contact Person</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
 					
 					<div class="form-group">
-						<label>Currency</label>
-						<select name="cars" >
-    <option value=" "> </option>  
-    <option value="volvo">IN</option>
-      <option value="saab">US</option>
-       
+						<label>State Code</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+					
+					<div class="form-group">
+						<label>Cell (If Any)</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+					
+					<div class="form-group">
+						<label>Email Address</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+					
+					<div class="form-group">
+						<label>Vendor Type</label>
+						<select name="cars">
+     
+    <option value="India">Multipurpose</option>
+    <option value="USA">Yarn</option>
+    <option value="Australia">Dye</option>
+    <option value="China">Jobwork</option>
+	<option value="Australia">Dye/Che</option>
+	<option value="Australia">Shipping</option>
+	<option value="Australia">Courier</option>
+	<option value="Australia">Others</option>
      </select>
 					</div>	
+				<div class="form-group">
+						<label>GST NO</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+
+<div class="form-group">
+						<label>Bank Name</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+
+<div class="form-group">
+						<label>Branch</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+
+<div class="form-group">
+						<label>Acno</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+
+<div class="form-group">
+						<label>IFSC Code</label>
+						<input type="text" class="form-control" required size="10">
+					</div>	
+
+<div class="form-group">
+						<label>PRF</label>
+						<input type="text" class="form-control" required size="10">
+					</div>		
+
+<div class="form-group">
+						<label>Unit/Section/Outside</label>
+						<select name="cars" >
+				<option value=" "> </option>
+				<option value="volvo">UNIT</option>
+				<option value="saab">SECTION</option>
+				<option value="volvo">INSIDE</option>
+				<option value="saab">OUTSIDE</option>
+
+			</select>
+					</div>						
+<div class="form-group">
+						<label>Due Days</label>
+						<input type="text" class="form-control" required size="10">
+					</div>			
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">

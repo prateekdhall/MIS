@@ -60,15 +60,16 @@ $(document).ready(function(){
 			<div class="nav-item dropdown">
 				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle active">Master</a>
 				<div class="dropdown-menu">					
-					<a href="#" class="dropdown-item">Buyer</a>
+					<a href="Buyer.html" class="dropdown-item">Buyer</a>
 					<a href="Supplier.html" class="dropdown-item">Supplier</a>
-					<a href="#" class="dropdown-item">Product</a>
-					<a href="#" class="dropdown-item">Yarn</a>
-					<a href="#" class="dropdown-item">Size</a>
-					<a href="#" class="dropdown-item">Colors</a>
+					<a href="Product.html" class="dropdown-item">Product</a>
+					<a href="Yarn.html" class="dropdown-item">Yarn</a>
+					<a href="Size.html" class="dropdown-item">Size</a>
+					<a href="Colors.html" class="dropdown-item">Colors</a>
+                    <a href="Accessories.html" class="dropdown-item">Accessories</a>
                 </div>
             </div>
-			
+			<a href="buyer-order.html" class="dropdown-item">Buyer Order</a>
 			<a href="#" class="nav-item nav-link">Contact</a>
         </div>
 		<!--<form class="navbar-form form-inline ml-auto">
@@ -89,10 +90,10 @@ $(document).ready(function(){
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2>Manage <b>Buyers</b></h2>
+						<h2>Manage <b>Accessories</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Buyer</span></a>
+						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Accessories</span></a>
 						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
 					</div>
 				</div>
@@ -217,47 +218,50 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Add Buyer</h4>
+					<h4 class="modal-title">Add Accessories</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
+                     
+                    <div class="form-group">
+						 <label>Group</label>
+                        <select name="cars" style="width: 100px;">     
+                        <option value="1">ACC</option>
+                            <option value="Mis">MIS</option>
+                        </select>
+					</div>	
 					<div class="form-group">
-						<label>Buyer Name</label>
-						<input type="text" class="form-control" required>
+						<label> Accessories Name </label>
+                        <input type="text" name="email" value="" size="40"/>
 					</div>
 					<div class="form-group">
-						<label>Buyer code</label>
-						<input type="text" class="form-control" required>
+						<label>Size </label>
+                        <input type="text" name="subject" value="" size="40"/>
 					</div>
+                      
+					
 					<div class="form-group">
-						<label>Address</label>
-						<textarea class="form-control" required></textarea>
-					</div>
-					<div class="form-group">
-						<label>City</label>
-						<input type="text" class="form-control" required>
+						  <label>Remarks  </label>
+                        <input type="text" name="email" value="" size="40"/>
 					</div>	
 					
 					<div class="form-group">
-						<label>Payment Term</label>
-						<input type="text" class="form-control" required>
+						 <label>Unit</label><select name="Black" style="width: 200px;">     
+                            <option value="Black"> </option>     
+                         </select>
 					</div>	
-					
-					
-					
-					<div class="form-group">
-						<label>Currency</label>
-						<select name="cars" >
-    <option value=" "> </option>  
-    <option value="volvo">IN</option>
-      <option value="saab">US</option>
-       
-     </select>
+					 
+				<div class="form-group">
+						<label>HSNC Code</label>
+                    <input type="text" name="subject" value="" size="40"/>
 					</div>	
+
+                    <div class="form-group">
+						<label>Particular Code</label> 
+                        <input type="text" name="subject" value="" size="40"/><br /><br/>
 				
-
-
-					
+					</div>	
+ 
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -273,43 +277,49 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Edit Buyer</h4>
+					<h4 class="modal-title">Edit Accessories</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-										<div class="form-group">
-						<label>Buyer Name</label>
-						<input type="text" class="form-control" required>
+				    <div class="form-group">
+						 <label>Group</label>
+                        <select name="cars" style="width: 100px;">     
+                        <option value="1">ACC</option>
+                            <option value="Mis">MIS</option>
+                        </select>
+					</div>	
+					<div class="form-group">
+						<label> Accessories Name </label>
+                        <input type="text" name="email" value="" size="40"/>
 					</div>
 					<div class="form-group">
-						<label>Buyer code</label>
-						<textarea class="form-control" required></textarea>
+						<label>Size </label>
+                        <input type="text" name="subject" value="" size="40"/>
 					</div>
+                      
+					
 					<div class="form-group">
-						<label>Address</label>
-						<textarea class="form-control" required></textarea>
-					</div>
-					<div class="form-group">
-						<label>City</label>
-						<input type="text" class="form-control" required>
+						  <label>Remarks  </label>
+                        <input type="text" name="email" value="" size="40"/>
 					</div>	
 					
 					<div class="form-group">
-						<label>Payment Term</label>
-						<input type="text" class="form-control" required>
+						 <label>Unit</label><select name="Black" style="width: 200px;">     
+                            <option value="Black"> </option>     
+                         </select>
 					</div>	
-					
-					
-					
-					<div class="form-group">
-						<label>Currency</label>
-						<select name="cars" >
-    <option value=" "> </option>  
-    <option value="volvo">IN</option>
-      <option value="saab">US</option>
-       
-     </select>
+					 
+				<div class="form-group">
+						<label>HSNC Code</label>
+                    <input type="text" name="subject" value="" size="40"/>
 					</div>	
+
+                    <div class="form-group">
+						<label>Particular Code</label> 
+                        <input type="text" name="subject" value="" size="40"/><br /><br/>
+				
+					</div>	
+ 			
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -325,7 +335,7 @@ $(document).ready(function(){
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Delete Employee</h4>
+					<h4 class="modal-title">Delete Accessories</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
